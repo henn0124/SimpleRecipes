@@ -1,0 +1,16 @@
+run = "npm run dev"
+modules = ["nodejs-20", "web", "nix"]
+
+[nix]
+channel = "stable-24_05"
+hidden = [".config", "tsconfig.json", "tsconfig.node.json", "vite.config.ts", ".gitignore"]
+[env]
+PATH = "/home/runner/$REPL_SLUG/.config/npm/node_global/bin:/home/runner/$REPL_SLUG/node_modules/.bin"
+OPENAI_API_KEY = "$OPENAI_API_KEY"
+
+[deployment]
+run = ["sh", "-c", "npm run dev"]
+
+[[ports]]
+localPort = 5173
+externalPort = 80
