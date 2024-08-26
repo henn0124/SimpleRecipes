@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import RecipeGenerator from '@/components/layout/RecipeGenerator'
@@ -9,8 +9,15 @@ import WinePair from '@/components/layout/WinePair'
 interface Recipe {
   name: string;
   description: string;
+  chefNote: string;
+  prepTime: string;
+  cookTime: string;
+  totalTime: string;
+  servings: string;
   ingredients: string[];
-  // Add other properties as needed
+  instructions: string[];
+  chefsSecret: string;
+  platingTip: string;
 }
 
 export default function App() {

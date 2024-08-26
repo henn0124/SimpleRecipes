@@ -9,7 +9,8 @@ PATH = "/home/runner/$REPL_SLUG/.config/npm/node_global/bin:/home/runner/$REPL_S
 OPENAI_API_KEY = "$OPENAI_API_KEY"
 
 [deployment]
-run = ["sh", "-c", "npm run dev"]
+deploymentTarget = "static"
+publicDir = "dist"
 
 [[ports]]
 localPort = 5173
