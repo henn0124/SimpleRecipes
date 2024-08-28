@@ -11,6 +11,7 @@ OPENAI_API_KEY = "$OPENAI_API_KEY"
 [deployment]
 deploymentTarget = "static"
 publicDir = "dist"
+build = ["sh", "-c", "npm install && npx tsc && npx vite build"]
 
 [[ports]]
 localPort = 5173
